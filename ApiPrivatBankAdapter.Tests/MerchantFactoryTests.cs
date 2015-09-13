@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ApiPrivatBankAdapter.Tests
 {
@@ -10,8 +9,8 @@ namespace ApiPrivatBankAdapter.Tests
         public void TestCreate()
         {
             var account = MerchantFactory.CreateAccount("John", "password");
-           Assert.AreEqual("John",account.Id);
-           Assert.AreEqual("55c3b5386c486feb662a0785f340938f518d547f",account.Password);
+            Assert.AreEqual("John", account.Id);
+            Assert.AreEqual("55c3b5386c486feb662a0785f340938f518d547f", account.Password);
         }
     }
 }
