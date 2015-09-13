@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ApiPrivatBankAdapter
 {
-    public class Account
+    public class Merchant
     {
         public string Id { get; private set; }
         public string Password { get; private set; }
 
-        internal Account(string id, string password)
+        internal Merchant(string id, string password)
         {
             Id = id;
             Password = password;

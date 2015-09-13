@@ -10,11 +10,7 @@ namespace ApiPrivatBankAdapter
     {
         public static byte[] GetByteArray(string str)
         {
-            List<int> resultAsInts = new List<int>();
-
-            resultAsInts.AddRange(str.Select(Convert.ToInt32));
-            
-            if (resultAsInts.All(num => num < 128))
+            if (str.Select(Convert.ToInt32).All(num => num < 128))
                 return Encoding.ASCII.GetBytes(str.ToCharArray());
             return Encoding.UTF8.GetBytes(str.ToCharArray());
             
