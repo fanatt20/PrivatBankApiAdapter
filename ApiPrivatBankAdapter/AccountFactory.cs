@@ -9,7 +9,7 @@ namespace ApiPrivatBankAdapter
 {
     public static class AccountFactory
     {
-        public static Account CreateAccount(string name, string password)
+        public static Account CreateAccount(string id, string password)
         {
 
             var passwordInMd5 = MD5.Create().ComputeHash(PhpEncoding.GetByteArray("password"));
@@ -19,7 +19,7 @@ namespace ApiPrivatBankAdapter
              */
             var passwordInMd5AsString = BitConverter.ToString(passwordInMd5).Replace("-", string.Empty).ToLower();
             var passwordInSha1AndMd5 = SHA1.Create().ComputeHash(PhpEncoding.GetByteArray(passwordInMd5AsString));
-            return new Account(name, BitConverter.ToString(passwordInSha1AndMd5).Replace("-",string.Empty).ToLower());
+            return new Account(id, BitConverter.ToString(passwordInSha1AndMd5).Replace("-",string.Empty).ToLower());
         }
     }
 }

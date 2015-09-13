@@ -10,7 +10,7 @@ namespace ApiPrivatBankAdapter.Tests
         public void TestCreate()
         {
             var account = AccountFactory.CreateAccount("John", "password");
-           Assert.AreEqual("John",account.Name);
+           Assert.AreEqual("John",account.Id);
            Assert.AreEqual("55c3b5386c486feb662a0785f340938f518d547f",account.Password);
         }
     }

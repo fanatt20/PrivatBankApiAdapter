@@ -8,12 +8,12 @@ namespace ApiPrivatBankAdapter
 {
     public class Account
     {
-        public string Name { get; private set; }
+        public string Id { get; private set; }
         public string Password { get; private set; }
 
-        internal Account(string name, string password)
+        internal Account(string id, string password)
         {
-            Name = name;
+            Id = id;
             Password = password;
 
         }
