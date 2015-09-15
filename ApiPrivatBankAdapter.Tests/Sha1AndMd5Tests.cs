@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using ApiPrivatBankAdapter.Encoding;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ApiPrivatBankAdapter.Tests

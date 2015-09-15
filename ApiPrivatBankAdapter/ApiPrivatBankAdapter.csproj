@@ -39,10 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Merchant.cs" />
-    <Compile Include="MerchantFactory.cs" />
-    <Compile Include="PhpEncoding.cs" />
+    <Compile Include="DataProperties\Operation.cs" />
+    <Compile Include="DataProperties\Payment.cs" />
+    <Compile Include="DataProperties\Test.cs" />
+    <Compile Include="DataProperties\Wait.cs" />
+    <Compile Include="DataProperties\IDataProperty.cs" />
+    <Compile Include="Encoding\Cryptography.cs" />
+    <Compile Include="Encoding\PhpEncoding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\Query.cs" />
+    <Compile Include="Queries\QueryBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
