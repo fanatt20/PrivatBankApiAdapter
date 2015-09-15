@@ -10,8 +10,11 @@ namespace ApiPrivatBankAdapter.Queries
         public Query()
         {
             DataProperties = new List<IDataProperty>();
+            DataProperties.Add(new Operation() { Value = "cmt" });
+            DataProperties.Add(new Test() { IsTest = false });
+            DataProperties.Add(new Wait() { WaitTime = 0 });
         }
-
+        
         internal int MerchantId { get; set; }
         internal List<IDataProperty> DataProperties { get; set; }
 
