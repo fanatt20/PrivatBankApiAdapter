@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<response version="1.0">
+  <merchant>
+    <id>11134</id>
+    <signature>signature no need for rest_yur</signature>
+  </merchant>
+  <data>
+    <oper>cmt</oper>
+    <info>
+      <abcde>
+        <row key="SAMBE0811FP2JZ.P" level="1">
+          <col name="TRANTYPE" level="2">C</col>
+          <col name="BPL_REF" level="2">SAMBE0811FP2JZ</col>
+          <col name="BPL_B_MFO_NAME" level="2">КИЄВСЬКЕ ГРУ ПАТ КБ&quot;ПРИВАТБАНК&quot;,М.КИЄВ</col>
+          <col name="BPL_FLMN" level="2">KI</col>
+          <col name="BPL_A_MFO" level="2">305299</col>
+          <col name="BPL_A_MFO_CITY" level="2">Днiпропетровськ</col>
+          <col name="BPL_NUM_DOC" level="2">E0811FP2JZ</col>
+          <col name="BPL_CCY" level="2">UAH</col>
+          <col name="BPL_DAT_KL" level="2">11.08.2014</col>
+          <col name="BPL_DOC_TYP" level="2">m</col>
+          <col name="BPL_A_ACC" level="2">29246827509065</col>
+          <col name="BPL_D_AB_EQ" level="2">KIH0</col>
+          <col name="BPL_B_MFO" level="2">321842</col>
+          <col name="BPL_DLR" level="2">3806963981</col>
+          <col name="BPL_SUM" level="2">169.98</col>
+          <col name="BPL_OSND" level="2">LIQPAY 41984256 DESCR 101155 Sergij Burdun Order 170.0_101155_1407770120</col>
+          <col name="BPL_FL_DC" level="2">C</col>
+          <col name="BPL_A_NAM" level="2">РАСЧЕТЫ ПО КАРТАМ (UAH)</col>
+          <col name="BPL_A_MFO_NAME" level="2">ПАТ КБ &quot;ПРИВАТБАНК&quot;</col>
+          <col name="BPL_FL_REAL" level="2">r</col>
+          <col name="ACC" level="2">26007060718278</col>
+          <col name="BPL_SUM_E" level="2">169.98</col>
+          <col name="BPL_A_CRF" level="2">14360570</col>
+          <col name="BPL_PR_CLS" level="2">P</col>
+          <col name="BPL_B_ACC" level="2">26007060718278</col>
+          <col name="BPL_REFN" level="2">P</col>
+          <col name="BPL_PR_PR" level="2">r</col>
+          <col name="BPL_APP" level="2">SM</col>
+          <col name="BPL_B_NAM" level="2">Волочко Нiна Василiвна пiдприємець</col>
+          <col name="BNK" level="2">PB</col>
+          <col name="BPL_TIM_P" level="2">18:19</col>
+          <col name="BPL_B_MFO_CITY" level="2">Київ</col>
+          <col name="BPL_B_CRF" level="2">2351516467</col>
+          <col name="BPL_DAT_OD" level="2">11.08.2014</col>
+          <col name="REF" level="2">SAMBE0811FP2JZ.P</col>
+          <col name="BPL_BRNM" level="2">KIYZ</col>
+        </row>
+      </abcde>
+    </info>
+  </data>
+</BalanceResponce>

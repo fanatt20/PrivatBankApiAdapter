@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="merchant" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string" minOccurs="0" />
+              <xs:element name="signature" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="data" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="oper" type="xs:string" minOccurs="0" />
+              <xs:element name="info" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="cardbalance" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="av_balance" type="xs:string" minOccurs="0" />
+                          <xs:element name="bal_date" type="xs:string" minOccurs="0" />
+                          <xs:element name="bal_dyn" type="xs:string" minOccurs="0" />
+                          <xs:element name="balance" type="xs:string" minOccurs="0" />
+                          <xs:element name="fin_limit" type="xs:string" minOccurs="0" />
+                          <xs:element name="trade_limit" type="xs:string" minOccurs="0" />
+                          <xs:element name="card" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="account" type="xs:string" minOccurs="0" />
+                                <xs:element name="card_number" type="xs:string" minOccurs="0" />
+                                <xs:element name="acc_name" type="xs:string" minOccurs="0" />
+                                <xs:element name="acc_type" type="xs:string" minOccurs="0" />
+                                <xs:element name="currency" type="xs:string" minOccurs="0" />
+                                <xs:element name="card_type" type="xs:string" minOccurs="0" />
+                                <xs:element name="main_card_number" type="xs:string" minOccurs="0" />
+                                <xs:element name="card_stat" type="xs:string" minOccurs="0" />
+                                <xs:element name="src" type="xs:string" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="response" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

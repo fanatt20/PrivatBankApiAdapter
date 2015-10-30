@@ -32,9 +32,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -47,12 +49,12 @@
     <Compile Include="Encoding\Cryptography.cs" />
     <Compile Include="Encoding\PhpEncoding.cs" />
     <Compile Include="Exceptions\SignaturesDoNotMatchException.cs" />
-    <Compile Include="PrivatBank net Manager\Parser\XmlMapper.cs" />
-    <Compile Include="PrivatBank net Manager\PrivatBankManager.cs" />
+    <Compile Include="PrivatBankConnectionManager\Parser\XmlMapper.cs" />
+    <Compile Include="PrivatBankConnectionManager\PrivatBankManager.cs" />
+    <Compile Include="PrivatBankConnectionManager\Parser\ResponceParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\Query.cs" />
     <Compile Include="Queries\QueryFactory.cs" />
-    <Compile Include="PrivatBank net Manager\Parser\ResponceParser.cs" />
     <Compile Include="RegExpCollection.cs" />
     <Compile Include="ResponseDto\Card.cs" />
     <Compile Include="ResponseDto\Balance.cs" />
@@ -63,7 +65,15 @@
     <Compile Include="TypeSafe Enums\Status.cs" />
     <Compile Include="TypeSafe Enums\PrivatBankUri.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ExampleOfPrivatBankResponse\Balance.xml" />
+    <Content Include="ExampleOfPrivatBankResponse\RestIndividual.xml" />
+    <Content Include="ExampleOfPrivatBankResponse\RestLegal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AnswerXsd\" />
+    <Folder Include="Generated\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

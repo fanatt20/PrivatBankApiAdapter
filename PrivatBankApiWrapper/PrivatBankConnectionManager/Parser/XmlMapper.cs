@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml;
 using PrivatBankApiWrapper.ResponseDto;
 
-namespace PrivatBankApiWrapper.PrivatBank_net_Manager.Parser
+namespace PrivatBankApiWrapper.PrivatBankConnectionManager.Parser
 {
     internal class XmlMapper
     {

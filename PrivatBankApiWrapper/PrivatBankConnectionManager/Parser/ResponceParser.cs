@@ -1,8 +1,8 @@
-﻿using PrivatBankApiWrapper.Encoding;
+using PrivatBankApiWrapper.Encoding;
 using PrivatBankApiWrapper.Exceptions;
 using PrivatBankApiWrapper.ResponseDto;
 
-namespace PrivatBankApiWrapper.PrivatBank_net_Manager.Parser
+namespace PrivatBankApiWrapper.PrivatBankConnectionManager.Parser
 {
     internal static class ResponceParser
     {

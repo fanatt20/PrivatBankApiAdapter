@@ -5,7 +5,7 @@ using PrivatBankApiWrapper.Queries;
 using PrivatBankApiWrapper.ResponseDto;
 using PrivatBankApiWrapper.TypeSafe_Enums;
 
-namespace PrivatBankApiWrapper.PrivatBank_net_Manager
+namespace PrivatBankApiWrapper.PrivatBankConnectionManager
 {
     internal class PrivatBankManager
     {
