@@ -3,18 +3,18 @@ using ApiPrivatBankAdapter.DataProperties;
 
 namespace ApiPrivatBankAdapter.Queries
 {
-    public class QueryBuilder
+    public class QueryFactory
     {
         private readonly int _merchantId;
         private readonly string _password;
 
-        public QueryBuilder(int merchantId, string password)
+        public QueryFactory(int merchantId, string password)
         {
             _merchantId = merchantId;
             _password = password;
         }
 
-        public string GetBalanceQuery(int cardNumber, string country)
+        public string GetBalance(int cardNumber, string country)
         {
             var query = new Query { MerchantId = _merchantId };
             var paymentProp = new Payment();
