@@ -49,8 +49,8 @@
     <Compile Include="Encoding\Cryptography.cs" />
     <Compile Include="Encoding\PhpEncoding.cs" />
     <Compile Include="Exceptions\SignaturesDoNotMatchException.cs" />
-    <Compile Include="ResponseDto\RestIndividual\RestIndividual.cs" />
-    <Compile Include="ResponseDto\Balance\BalanceResponse.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividualResponce.cs" />
+    <Compile Include="ResponseDto\Balance\BalanceDto.cs" />
     <Compile Include="Parser\XmlMapper.cs" />
     <Compile Include="PrivatBankConnectionManager\PrivatBankManager.cs" />
     <Compile Include="Parser\ResponceParser.cs" />
@@ -58,9 +58,9 @@
     <Compile Include="Request\Request.cs" />
     <Compile Include="Request\RequestFactory.cs" />
     <Compile Include="RegExpCollection.cs" />
-    <Compile Include="ResponseDto\Balance\Card.cs" />
-    <Compile Include="ResponseDto\Balance\CardBalance.cs" />
-    <Compile Include="ResponseDto\Balance\BalanceData.cs" />
+    <Compile Include="ResponseDto\Balance\CardDto.cs" />
+    <Compile Include="ResponseDto\Balance\CardBalanceDto.cs" />
+    <Compile Include="ResponseDto\Balance\BalanceDataDto.cs" />
     <Compile Include="ResponseDto\Global\Merchant.cs" />
     <Compile Include="DomainObjects\Card.cs" />
     <Compile Include="DomainObjects\Balance.cs" />

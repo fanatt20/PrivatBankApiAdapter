@@ -6,7 +6,7 @@ namespace PrivatBankApiWrapper.ResponseDto.Balance
     /// <remarks />
     [XmlType( AnonymousType = true)]
     [XmlRoot(Namespace = "",ElementName = "response", IsNullable = false)]
-    public class BalanceResponse
+    public class BalanceDto
     {
         /// <remarks />
         [XmlElement("merchant", Form = XmlSchemaForm.Unqualified)]
@@ -14,7 +14,7 @@ namespace PrivatBankApiWrapper.ResponseDto.Balance
 
         /// <remarks />
         [XmlElement("data", Form = XmlSchemaForm.Unqualified)]
-        public BalanceData BalanceData { get; set; }
+        public BalanceDataDto BalanceDataDto { get; set; }
 
         /// <remarks />
         [XmlAttribute("version")]

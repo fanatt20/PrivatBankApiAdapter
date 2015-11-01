@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace PrivatBankApiWrapper.ResponseDto.Balance
 {
     [XmlType(AnonymousType = true)]
-    public class BalanceData
+    public class BalanceDataDto
     {
         /// <remarks />
         [XmlElement("oper",Form = XmlSchemaForm.Unqualified)]
@@ -12,8 +12,8 @@ namespace PrivatBankApiWrapper.ResponseDto.Balance
 
         /// <remarks />
         [XmlArray(Form = XmlSchemaForm.Unqualified)]
-        [XmlArrayItem("cardbalance", typeof (CardBalance), Form = XmlSchemaForm.Unqualified,
+        [XmlArrayItem("cardbalance", typeof (CardBalanceDto), Form = XmlSchemaForm.Unqualified,
             IsNullable = false)]
-        public CardBalance[] info { get; set; }
+        public CardBalanceDto[] info { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using PrivatBankApiWrapper.ResponseDto;
 
 namespace PrivatBankApiWrapper.DomainObjects
 {
-    internal class BalanceDto
+    internal class Balance
     {
         public Card Card { get; set; }
         public decimal AvaibleBalance { get; set; }

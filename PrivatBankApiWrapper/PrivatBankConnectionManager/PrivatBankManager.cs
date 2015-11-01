@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using PrivatBankApiWrapper.DomainObjects;
+using PrivatBankApiWrapper.Parser;
 using PrivatBankApiWrapper.Request;
 using PrivatBankApiWrapper.ResponseDto;
 using PrivatBankApiWrapper.TypeSafe_Enums;
@@ -10,9 +11,9 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
 {
     internal class PrivatBankManager
     {
-        public BalanceDto GetBalance(int merchantId, int cardNumber, string password, string country)
+        public Balance GetBalance(int merchantId, int cardNumber, string password, string country)
         {
-            var result = new BalanceDto();
+            Balance result;
             var request = WebRequest.CreateHttp(PrivatBankUri.Balance.Value);
             using (var sw = new StreamWriter(request.GetRequestStream()))
             {
@@ -22,9 +23,9 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
             var response = request.GetResponse();
             using (var sr = new StreamReader(response.GetResponseStream()))
             {
-                //todo parse BalanceResponce
-                throw new NotImplementedException();
+                result = ResponceParser.GetBalance(sr.ReadToEnd(),password);
             }
+            return result;
 
         }
     }

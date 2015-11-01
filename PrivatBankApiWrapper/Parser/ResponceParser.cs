@@ -1,23 +1,19 @@
 using PrivatBankApiWrapper.DomainObjects;
 using PrivatBankApiWrapper.Encoding;
 using PrivatBankApiWrapper.Exceptions;
-using PrivatBankApiWrapper.ResponseDto;
 
 namespace PrivatBankApiWrapper.Parser
 {
     internal static class ResponceParser
     {
-        internal static BalanceDto GetBalance(string balanceInXml, string password)
+        internal static Balance GetBalance(string balanceInXml, string password)
         {
-            //TODO:Exception handling
-            BalanceDto result = null;
+            Balance result = null;
 
 
             if (SignatureIsCorrect(balanceInXml, password))
             {
-                result =
-                    XmlMapper.MapBalance(
-                        RegExpCollection.Data.Match(balanceInXml).Value.Replace("<data>", "").Replace("</data>", ""));
+                result = XmlMapper.MapBalance(balanceInXml);
             }
             else
             {
