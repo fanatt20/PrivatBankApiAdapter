@@ -61,6 +61,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RestIndividualTest.cs" />
     <Compile Include="Sha1AndMd5Tests.cs" />
     <Compile Include="BalanceDeserializationTest.cs" />
   </ItemGroup>
@@ -74,10 +75,16 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\balance.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestIndividual.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

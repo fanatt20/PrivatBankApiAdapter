@@ -121,4 +121,7 @@
   <data name="Balance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balance.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="RestIndividual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RestIndividual.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

@@ -62,14 +62,14 @@ namespace PrivatBankApiWrapper.Tests.Properties {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        ///&lt;BalanceResponce version=&quot;1.0&quot;&gt;
+        ///&lt;response version=&quot;1.0&quot;&gt;
         ///  &lt;merchant&gt;
         ///    &lt;id&gt;75482&lt;/id&gt;
         ///    &lt;signature&gt;bff932d0e97877619965283ed0d147c87a78b6c1&lt;/signature&gt;
         ///  &lt;/merchant&gt;
         ///  &lt;data&gt;
         ///    &lt;oper&gt;cmt&lt;/oper&gt;
-        ///    &lt;CardBalance&gt;
+        ///    &lt;info&gt;
         ///      &lt;cardbalance&gt;
         ///        &lt;card&gt;
         ///          &lt;account&gt;5168742060221193&lt;/account&gt;
@@ -82,6 +82,25 @@ namespace PrivatBankApiWrapper.Tests.Properties {
         internal static string Balance {
             get {
                 return ResourceManager.GetString("Balance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;response version=&quot;1.0&quot;&gt;
+        ///  &lt;merchant&gt;
+        ///    &lt;id&gt;75482&lt;/id&gt;
+        ///    &lt;signature&gt;553995c5ccc8c81815b58cf6374f68f00a28bbd7&lt;/signature&gt;
+        ///  &lt;/merchant&gt;
+        ///  &lt;data&gt;
+        ///    &lt;oper&gt;cmt&lt;/oper&gt;
+        ///    &lt;info&gt;
+        ///      &lt;statements status=&quot;excellent&quot; credit=&quot;0.0&quot; debet=&quot;0.3&quot;  &gt;
+        ///        &lt;statement card=&quot;5168742060221193&quot; appcode=&quot;591969&quot; trandate=&quot;2013-09-02&quot; amount=&quot;0.10 UAH&quot; cardamount=&quot;-0.10 UAH&quot; rest=&quot;0.95 UAH&quot; terminal=&quot;Пополнение мобильного +380139917053 через «Приват24»&quot; description=&quot;&quot;  [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string RestIndividual {
+            get {
+                return ResourceManager.GetString("RestIndividual", resourceCulture);
             }
         }
     }

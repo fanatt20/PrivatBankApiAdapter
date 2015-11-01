@@ -49,7 +49,8 @@
     <Compile Include="Encoding\Cryptography.cs" />
     <Compile Include="Encoding\PhpEncoding.cs" />
     <Compile Include="Exceptions\SignaturesDoNotMatchException.cs" />
-    <Compile Include="ResponseDto\Balance\BalanceResponce.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividual.cs" />
+    <Compile Include="ResponseDto\Balance\BalanceResponse.cs" />
     <Compile Include="PrivatBankConnectionManager\Parser\XmlMapper.cs" />
     <Compile Include="PrivatBankConnectionManager\PrivatBankManager.cs" />
     <Compile Include="PrivatBankConnectionManager\Parser\ResponceParser.cs" />
@@ -59,13 +60,16 @@
     <Compile Include="RegExpCollection.cs" />
     <Compile Include="ResponseDto\Balance\Card.cs" />
     <Compile Include="ResponseDto\Balance\CardBalance.cs" />
-    <Compile Include="ResponseDto\Balance\DataForBalance.cs" />
-    <Compile Include="ResponseDto\Balance\Merchant.cs" />
+    <Compile Include="ResponseDto\Balance\BalanceData.cs" />
+    <Compile Include="ResponseDto\Global\Merchant.cs" />
     <Compile Include="Adapters\Card.cs" />
     <Compile Include="Adapters\Balance.cs" />
     <Compile Include="Adapters\Money.cs" />
-    <Compile Include="Adapters\RestIndividual.cs" />
+    <Compile Include="Adapters\RestIndividualDto.cs" />
     <Compile Include="Adapters\Transaction.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividualData.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividualStatements.cs" />
+    <Compile Include="ResponseDto\RestIndividual\Statement.cs" />
     <Compile Include="TypeSafe Enums\Currency.cs" />
     <Compile Include="TypeSafe Enums\Status.cs" />
     <Compile Include="TypeSafe Enums\PrivatBankUri.cs" />
@@ -78,7 +82,6 @@
   <ItemGroup>
     <Folder Include="AnswerXsd\" />
     <Folder Include="Generated\" />
-    <Folder Include="ResponseDto\RestIndividual\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

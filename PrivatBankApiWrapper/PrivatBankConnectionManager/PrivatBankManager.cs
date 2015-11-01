@@ -25,7 +25,6 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
                 throw new NotImplementedException();
             }
 
-            return result;
         }
     }
 }

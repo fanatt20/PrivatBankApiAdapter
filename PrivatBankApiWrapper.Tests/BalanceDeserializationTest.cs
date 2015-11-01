@@ -9,35 +9,35 @@ namespace PrivatBankApiWrapper.Tests
     [TestClass]
     public class BalanceDeserializationTest
     {
-        private BalanceResponce _balance;
+        private BalanceResponse _balance;
 
         [TestInitialize]
         public void ParseAndAssignBalance()
         {
-            var serializer = new XmlSerializer(typeof (BalanceResponce));
+            var serializer = new XmlSerializer(typeof (BalanceResponse));
             using (TextReader reader = new StringReader(Resources.Balance))
             {
-                _balance = (BalanceResponce) serializer.Deserialize(reader);
+                _balance = (BalanceResponse) serializer.Deserialize(reader);
             }
         }
 
         [TestMethod]
-        public void MerchantTest()
+        public void TestBalanceResponce_MerchantField()
         {
             Assert.AreEqual("75482", _balance.Merchant.Id);
             Assert.AreEqual("bff932d0e97877619965283ed0d147c87a78b6c1", _balance.Merchant.Signature);
         }
 
         [TestMethod]
-        public void DataTest()
+        public void TestBalanceResponce_DataField()
         {
-            Assert.AreEqual("cmt", _balance.Data.Operation);
+            Assert.AreEqual("cmt", _balance.BalanceData.Operation);
         }
 
         [TestMethod]
-        public void CardTest()
+        public void TestBalanceResponce_CardField()
         {
-            var card = _balance.Data.info[0].Card;
+            var card = _balance.BalanceData.info[0].Card;
             Assert.AreEqual("5168742060221193", card.Account);
             Assert.AreEqual("5168742060221193", card.CardNumber);
             Assert.AreEqual("Карта для Выплат Gold", card.AccName);
@@ -50,9 +50,9 @@ namespace PrivatBankApiWrapper.Tests
         }
 
         [TestMethod]
-        public void CardBalance()
+        public void TestBalanceResponce_CardBalanceField()
         {
-            var cardBalance = _balance.Data.info[0];
+            var cardBalance = _balance.BalanceData.info[0];
             Assert.AreEqual((decimal)0.95, cardBalance.AvBalance);
             Assert.AreEqual("11.09.13 15:56", cardBalance.BalDate);
             Assert.AreEqual("E", cardBalance.BalDyn);

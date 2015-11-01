@@ -2,7 +2,7 @@
 
 namespace PrivatBankApiWrapper.ResponseDto
 {
-    public class RestIndividual
+    public class RestIndividualDto
     {
         //TODO:status
         public decimal Credit { get; set; }

@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace PrivatBankApiWrapper.ResponseDto.Balance
 {
     [XmlType(AnonymousType = true)]
-    public class DataForBalance
+    public class BalanceData
     {
         /// <remarks />
         [XmlElement("oper",Form = XmlSchemaForm.Unqualified)]
