@@ -4,7 +4,6 @@ namespace PrivatBankApiWrapper.ResponseDto
 {
     internal class BalanceDto
     {
-        //TODO:bal_dyn
         public Card Card { get; set; }
         public decimal AvaibleBalance { get; set; }
         public DateTime BalanceTime { get; set; }

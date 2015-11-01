@@ -3,11 +3,11 @@ using System.Text;
 using PrivatBankApiWrapper.DataProperties;
 using PrivatBankApiWrapper.Encoding;
 
-namespace PrivatBankApiWrapper.Queries
+namespace PrivatBankApiWrapper.Request
 {
-    internal class Query
+    internal class Request
     {
-        public Query()
+        public Request()
         {
             DataProperties = new List<IDataProperty>();
         }

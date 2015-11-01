@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using PrivatBankApiWrapper.Queries;
+using PrivatBankApiWrapper.Request;
 using PrivatBankApiWrapper.ResponseDto;
 using PrivatBankApiWrapper.TypeSafe_Enums;
 
@@ -15,7 +15,7 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
             var request = WebRequest.CreateHttp(PrivatBankUri.Balance.Value);
             using (var sw = new StreamWriter(request.GetRequestStream()))
             {
-                sw.Write(new QueryFactory(merchantId, password).GetBalance(cardNumber, country));
+                sw.Write(new RequestFactory(merchantId, password).GetBalance(cardNumber, country));
             }
 
             var response = request.GetResponse();

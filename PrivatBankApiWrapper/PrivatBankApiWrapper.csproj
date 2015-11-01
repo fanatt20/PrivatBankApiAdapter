@@ -51,12 +51,12 @@
     <Compile Include="Exceptions\SignaturesDoNotMatchException.cs" />
     <Compile Include="ResponseDto\RestIndividual\RestIndividual.cs" />
     <Compile Include="ResponseDto\Balance\BalanceResponse.cs" />
-    <Compile Include="PrivatBankConnectionManager\Parser\XmlMapper.cs" />
+    <Compile Include="Parser\XmlMapper.cs" />
     <Compile Include="PrivatBankConnectionManager\PrivatBankManager.cs" />
-    <Compile Include="PrivatBankConnectionManager\Parser\ResponceParser.cs" />
+    <Compile Include="Parser\ResponceParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\Query.cs" />
-    <Compile Include="Queries\QueryFactory.cs" />
+    <Compile Include="Request\Request.cs" />
+    <Compile Include="Request\RequestFactory.cs" />
     <Compile Include="RegExpCollection.cs" />
     <Compile Include="ResponseDto\Balance\Card.cs" />
     <Compile Include="ResponseDto\Balance\CardBalance.cs" />
