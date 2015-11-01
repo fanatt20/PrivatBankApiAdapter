@@ -2,7 +2,7 @@
 
 namespace PrivatBankApiWrapper.ResponseDto
 {
-    internal class Balance
+    internal class BalanceDto
     {
         //TODO:bal_dyn
         public Card Card { get; set; }

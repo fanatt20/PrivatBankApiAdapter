@@ -7,9 +7,9 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager.Parser
 {
     internal class XmlMapper
     {
-        public static Balance MapBalance(string data)
+        public static BalanceDto MapBalance(string data)
         {
-            var card = new Card();
+            var card = new ResponseDto.Card();
             var splitedData = RegExpCollection.ClosingTag.Replace(data, "{*EndTag*}").Split('\n');
             var reader = new XmlTextReader(new StringReader(data));
 

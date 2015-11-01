@@ -6,10 +6,10 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager.Parser
 {
     internal static class ResponceParser
     {
-        internal static Balance GetBalance(string balanceInXml, string password)
+        internal static BalanceDto GetBalance(string balanceInXml, string password)
         {
             //TODO:Exception handling
-            Balance result = null;
+            BalanceDto result = null;
 
 
             if (SignatureIsCorrect(balanceInXml, password))

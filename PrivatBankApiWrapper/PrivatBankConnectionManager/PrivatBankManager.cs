@@ -9,9 +9,9 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
 {
     internal class PrivatBankManager
     {
-        public Balance GetBalance(int merchantId, int cardNumber, string password, string country)
+        public BalanceDto GetBalance(int merchantId, int cardNumber, string password, string country)
         {
-            var result = new Balance();
+            var result = new BalanceDto();
             var request = WebRequest.CreateHttp(PrivatBankUri.Balance.Value);
             using (var sw = new StreamWriter(request.GetRequestStream()))
             {
@@ -21,7 +21,7 @@ namespace PrivatBankApiWrapper.PrivatBankConnectionManager
             var response = request.GetResponse();
             using (var sr = new StreamReader(response.GetResponseStream()))
             {
-                //todo parse response
+                //todo parse BalanceResponce
                 throw new NotImplementedException();
             }
 
