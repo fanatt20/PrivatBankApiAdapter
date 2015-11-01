@@ -22,7 +22,7 @@ namespace PrivatBankApiWrapper.Parser
             var status = MapStatus(balanceDto);
             var card = MapCard(balanceDto, currency, status);
             var result = MapBalance(balanceDto, card);
-            
+
             return result;
         }
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace PrivatBankApiWrapper.DataProperties
+namespace PrivatBankApiWrapper.Request.DataProperties
 {
     internal class Payment : IDataProperty
     {

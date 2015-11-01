@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProperties\Operation.cs" />
-    <Compile Include="DataProperties\Payment.cs" />
-    <Compile Include="DataProperties\Test.cs" />
-    <Compile Include="DataProperties\Wait.cs" />
-    <Compile Include="DataProperties\IDataProperty.cs" />
+    <Compile Include="Request\DataProperties\Operation.cs" />
+    <Compile Include="Request\DataProperties\Payment.cs" />
+    <Compile Include="Request\DataProperties\Test.cs" />
+    <Compile Include="Request\DataProperties\Wait.cs" />
+    <Compile Include="Request\DataProperties\IDataProperty.cs" />
     <Compile Include="Encoding\Cryptography.cs" />
     <Compile Include="Encoding\PhpEncoding.cs" />
     <Compile Include="Exceptions\SignaturesDoNotMatchException.cs" />
-    <Compile Include="ResponseDto\RestIndividual\RestIndividualResponce.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividualDto.cs" />
     <Compile Include="ResponseDto\Balance\BalanceDto.cs" />
     <Compile Include="Parser\XmlMapper.cs" />
     <Compile Include="PrivatBankConnectionManager\PrivatBankManager.cs" />
@@ -65,11 +65,11 @@
     <Compile Include="DomainObjects\Card.cs" />
     <Compile Include="DomainObjects\Balance.cs" />
     <Compile Include="DomainObjects\Money.cs" />
-    <Compile Include="DomainObjects\RestIndividualDto.cs" />
+    <Compile Include="DomainObjects\RestIndividual.cs" />
     <Compile Include="DomainObjects\Transaction.cs" />
-    <Compile Include="ResponseDto\RestIndividual\RestIndividualData.cs" />
-    <Compile Include="ResponseDto\RestIndividual\RestIndividualStatements.cs" />
-    <Compile Include="ResponseDto\RestIndividual\Statement.cs" />
+    <Compile Include="ResponseDto\RestIndividual\RestIndividualDataDto.cs" />
+    <Compile Include="ResponseDto\RestIndividual\StatementsDto.cs" />
+    <Compile Include="ResponseDto\RestIndividual\TransactionDto.cs" />
     <Compile Include="TypeSafe Enums\Currency.cs" />
     <Compile Include="TypeSafe Enums\Status.cs" />
     <Compile Include="TypeSafe Enums\PrivatBankUri.cs" />

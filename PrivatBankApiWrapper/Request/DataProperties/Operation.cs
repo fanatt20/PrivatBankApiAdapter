@@ -1,4 +1,4 @@
-﻿namespace PrivatBankApiWrapper.DataProperties
+﻿namespace PrivatBankApiWrapper.Request.DataProperties
 {
     internal class Operation : IDataProperty
     {

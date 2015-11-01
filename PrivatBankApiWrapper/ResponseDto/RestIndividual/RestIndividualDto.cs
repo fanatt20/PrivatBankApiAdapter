@@ -14,7 +14,7 @@ namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 
         /// <remarks />
         [XmlElement("data", Form = XmlSchemaForm.Unqualified)]
-        public RestIndividualData Data { get; set; }
+        public RestIndividualDataDto Data { get; set; }
 
         /// <remarks />
         [XmlAttribute("version")]

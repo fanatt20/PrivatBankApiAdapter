@@ -4,11 +4,11 @@ using System.Xml.Serialization;
 namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 {
     [XmlType(AnonymousType = true)]
-    public class RestIndividualStatements
+    public class StatementsDto
     {
         /// <remarks />
         [XmlElement("statement", Form = XmlSchemaForm.Unqualified)]
-        public Statement[] Statements { get; set; }
+        public TransactionDto[] Statements { get; set; }
 
         /// <remarks />
         [XmlAttribute("status")]

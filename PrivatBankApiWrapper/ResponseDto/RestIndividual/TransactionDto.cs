@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 {
     [XmlType(AnonymousType = true)]
-    public class Statement
+    public class TransactionDto
     {
         /// <remarks />
         [XmlAttribute("card")]

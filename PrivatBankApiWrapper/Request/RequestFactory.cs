@@ -1,5 +1,5 @@
 ﻿using System;
-using PrivatBankApiWrapper.DataProperties;
+using PrivatBankApiWrapper.Request.DataProperties;
 
 namespace PrivatBankApiWrapper.Request
 {

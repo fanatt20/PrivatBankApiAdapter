@@ -8,18 +8,10 @@ namespace PrivatBankApiWrapper.Parser
     {
         internal static Balance GetBalance(string balanceInXml, string password)
         {
-            Balance result = null;
-
-
-            if (SignatureIsCorrect(balanceInXml, password))
-            {
-                result = XmlMapper.MapBalance(balanceInXml);
-            }
-            else
-            {
+            if (!SignatureIsCorrect(balanceInXml, password))
                 throw new SignaturesDoNotMatchException();
-            }
-            return result;
+
+            return XmlMapper.MapBalance(balanceInXml);
         }
 
         private static bool SignatureIsCorrect(string balanceResponce, string password)

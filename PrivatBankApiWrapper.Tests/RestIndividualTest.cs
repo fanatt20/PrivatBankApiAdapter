@@ -45,7 +45,7 @@ namespace PrivatBankApiWrapper.Tests
         [TestMethod]
         public void TestRestIndividual_StatementsField()
         {
-            Statement[] stats = _response.Data.info[0].Statements;
+            TransactionDto[] stats = _response.Data.info[0].Statements;
 
             Assert.AreEqual(3, stats.Length);
 

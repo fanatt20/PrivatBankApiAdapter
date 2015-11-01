@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 {
     [XmlType(AnonymousType = true)]
-    public class RestIndividualData
+    public class RestIndividualDataDto
     {
         /// <remarks />
         [XmlElement("oper", Form = XmlSchemaForm.Unqualified)]
@@ -12,8 +12,8 @@ namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 
         /// <remarks />
         [XmlArray(Form = XmlSchemaForm.Unqualified)]
-        [XmlArrayItem("statements", typeof (RestIndividualStatements), Form = XmlSchemaForm.Unqualified,
+        [XmlArrayItem("statements", typeof (StatementsDto), Form = XmlSchemaForm.Unqualified,
             IsNullable = false)]
-        public RestIndividualStatements[] info { get; set; }
+        public StatementsDto[] info { get; set; }
     }
 }

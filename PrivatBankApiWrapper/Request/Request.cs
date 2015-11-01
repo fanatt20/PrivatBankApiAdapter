@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using PrivatBankApiWrapper.DataProperties;
 using PrivatBankApiWrapper.Encoding;
+using PrivatBankApiWrapper.Request.DataProperties;
 
 namespace PrivatBankApiWrapper.Request
 {
