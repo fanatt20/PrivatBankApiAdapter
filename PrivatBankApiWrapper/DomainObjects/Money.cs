@@ -1,6 +1,6 @@
 ﻿using PrivatBankApiWrapper.TypeSafe_Enums;
 
-namespace PrivatBankApiWrapper.ResponseDto
+namespace PrivatBankApiWrapper.DomainObjects
 {
     public class Money
     {

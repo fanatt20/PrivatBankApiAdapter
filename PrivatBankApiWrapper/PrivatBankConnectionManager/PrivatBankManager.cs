@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using PrivatBankApiWrapper.DomainObjects;
 using PrivatBankApiWrapper.Request;
 using PrivatBankApiWrapper.ResponseDto;
 using PrivatBankApiWrapper.TypeSafe_Enums;

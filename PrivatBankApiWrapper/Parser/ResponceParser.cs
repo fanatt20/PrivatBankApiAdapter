@@ -1,3 +1,4 @@
+using PrivatBankApiWrapper.DomainObjects;
 using PrivatBankApiWrapper.Encoding;
 using PrivatBankApiWrapper.Exceptions;
 using PrivatBankApiWrapper.ResponseDto;

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using PrivatBankApiWrapper.ResponseDto;
 
-namespace PrivatBankApiWrapper.ResponseDto
+namespace PrivatBankApiWrapper.DomainObjects
 {
     public class RestIndividualDto
     {

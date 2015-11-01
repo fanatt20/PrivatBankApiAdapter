@@ -62,11 +62,11 @@
     <Compile Include="ResponseDto\Balance\CardBalance.cs" />
     <Compile Include="ResponseDto\Balance\BalanceData.cs" />
     <Compile Include="ResponseDto\Global\Merchant.cs" />
-    <Compile Include="Adapters\Card.cs" />
-    <Compile Include="Adapters\Balance.cs" />
-    <Compile Include="Adapters\Money.cs" />
-    <Compile Include="Adapters\RestIndividualDto.cs" />
-    <Compile Include="Adapters\Transaction.cs" />
+    <Compile Include="DomainObjects\Card.cs" />
+    <Compile Include="DomainObjects\Balance.cs" />
+    <Compile Include="DomainObjects\Money.cs" />
+    <Compile Include="DomainObjects\RestIndividualDto.cs" />
+    <Compile Include="DomainObjects\Transaction.cs" />
     <Compile Include="ResponseDto\RestIndividual\RestIndividualData.cs" />
     <Compile Include="ResponseDto\RestIndividual\RestIndividualStatements.cs" />
     <Compile Include="ResponseDto\RestIndividual\Statement.cs" />

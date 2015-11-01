@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PrivatBankApiWrapper.ResponseDto
+namespace PrivatBankApiWrapper.DomainObjects
 {
     public class Transaction
     {

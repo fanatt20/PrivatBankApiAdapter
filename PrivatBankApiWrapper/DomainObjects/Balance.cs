@@ -1,6 +1,7 @@
 ﻿using System;
+using PrivatBankApiWrapper.ResponseDto;
 
-namespace PrivatBankApiWrapper.ResponseDto
+namespace PrivatBankApiWrapper.DomainObjects
 {
     internal class BalanceDto
     {
