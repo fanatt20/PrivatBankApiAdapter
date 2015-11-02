@@ -14,6 +14,13 @@ namespace PrivatBankApiWrapper.Parser
             return XmlMapper.MapBalance(balanceInXml);
         }
 
+        internal static RestIndividual GetRestIndividual(string balanceInXml, string password)
+        {
+            if(!SignatureIsCorrect(balanceInXml,password))
+                throw new SignaturesDoNotMatchException();
+            return XmlMapper.MapRestIndividual(balanceInXml);
+        }
+
         private static bool SignatureIsCorrect(string balanceResponce, string password)
         {
             var signatureFromServer =

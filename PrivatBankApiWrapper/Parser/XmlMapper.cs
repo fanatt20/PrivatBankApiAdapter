@@ -1,8 +1,10 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 using PrivatBankApiWrapper.DomainObjects;
 using PrivatBankApiWrapper.ResponseDto.Balance;
+using PrivatBankApiWrapper.ResponseDto.RestIndividual;
 using PrivatBankApiWrapper.TypeSafe_Enums;
 
 namespace PrivatBankApiWrapper.Parser
@@ -11,19 +13,66 @@ namespace PrivatBankApiWrapper.Parser
     {
         public static Balance MapBalance(string data)
         {
-            BalanceDto balanceDto;
-            var serializer = new XmlSerializer(typeof (BalanceDto));
-            using (TextReader reader = new StringReader(data))
-            {
-                balanceDto = (BalanceDto) serializer.Deserialize(reader);
-            }
+            var balanceDto = Deserialize<BalanceDto>(data);
 
             var currency = MapCurrency(balanceDto);
             var status = MapStatus(balanceDto);
-            var card = MapCard(balanceDto, currency, status);
+            var card = MapCard(balanceDto.BalanceDataDto.info[0], currency, status);
             var result = MapBalance(balanceDto, card);
 
             return result;
+        }
+
+        public static RestIndividual MapRestIndividual(string data)
+        {
+            var restIndividualDto = Deserialize<RestIndividualResponse>(data);
+
+            var transactions = MapTransactions(restIndividualDto.Data.info[0].Statements);
+            var rest = MapRestIndividual(restIndividualDto.Data.info[0], transactions);
+
+            return rest;
+        }
+
+        private static TResult Deserialize<TResult>(string data)
+        {
+            TResult restIndividualDto;
+            var serializer = new XmlSerializer(typeof (TResult));
+            using (var reader = new StringReader(data))
+            {
+                restIndividualDto = (TResult) serializer.Deserialize(reader);
+            }
+            return restIndividualDto;
+        }
+
+        private static RestIndividual MapRestIndividual(StatementsDto restIndividualDto, Transaction[] transactions)
+        {
+            return new RestIndividual {Credit = restIndividualDto.Credit, Debet = restIndividualDto.Debet};
+        }
+
+        private static Transaction[] MapTransactions(TransactionDto[] transactionDto)
+        {
+            return transactionDto.Select(transaction => new Transaction
+            {
+                Amount = new Money
+                {
+                    Currency = new Currency(transaction.Amount.Split(' ')[1]),
+                    Value = decimal.Parse(transaction.Amount.Split(' ')[0])
+                },
+                CardAmount = new Money
+                {
+                    Currency = new Currency(transaction.CardAmount.Split(' ')[1]),
+                    Value = decimal.Parse(transaction.CardAmount.Split(' ')[0])
+                },
+                CardRest = new Money
+                {
+                    Currency = new Currency(transaction.Rest.Split(' ')[1]),
+                    Value = decimal.Parse(transaction.Rest.Split(' ')[0])
+                },
+                Card = transaction.Card,
+                Terminal = transaction.Terminal,
+                Date = DateTime.Parse(transaction.TransactionDate),
+                Details = transaction.Description
+            }).ToArray();
         }
 
         private static Currency MapCurrency(BalanceDto balanceDto)
@@ -36,14 +85,14 @@ namespace PrivatBankApiWrapper.Parser
             return new Status(balanceDto.BalanceDataDto.info[0].Card.CardStat);
         }
 
-        private static Card MapCard(BalanceDto balanceDto, Currency currency, Status status)
+        private static Card MapCard(CardBalanceDto balanceDto, Currency currency, Status status)
         {
             return new Card
             {
-                Account = balanceDto.BalanceDataDto.info[0].Card.Account,
-                CardName = balanceDto.BalanceDataDto.info[0].Card.AccName,
-                CardNumber = balanceDto.BalanceDataDto.info[0].Card.CardNumber,
-                CardType = balanceDto.BalanceDataDto.info[0].Card.CardType,
+                Account = balanceDto.Card.Account,
+                CardName = balanceDto.Card.AccName,
+                CardNumber = balanceDto.Card.CardNumber,
+                CardType = balanceDto.Card.CardType,
                 Currency = currency,
                 Status = status
             };
