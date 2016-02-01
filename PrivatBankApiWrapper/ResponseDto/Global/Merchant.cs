@@ -1,7 +1,7 @@
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-namespace PrivatBankApiWrapper.ResponseDto.Balance
+namespace PrivatBankApiWrapper.ResponseDto.Global
 {
     [XmlType(AnonymousType = true)]
     public class Merchant

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generated\RestLegal.cs" />
     <Compile Include="Request\DataProperties\Operation.cs" />
     <Compile Include="Request\DataProperties\Payment.cs" />
     <Compile Include="Request\DataProperties\Test.cs" />
@@ -81,7 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AnswerXsd\" />
-    <Folder Include="Generated\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

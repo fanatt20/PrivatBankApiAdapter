@@ -1,6 +1,7 @@
 ﻿using System.Xml.Schema;
 using System.Xml.Serialization;
 using PrivatBankApiWrapper.ResponseDto.Balance;
+using PrivatBankApiWrapper.ResponseDto.Global;
 
 namespace PrivatBankApiWrapper.ResponseDto.RestIndividual
 {
